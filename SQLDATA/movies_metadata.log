@@ -1,0 +1,120 @@
+
+SQL*Loader: Release 12.2.0.1.0 - Production on Mon Mar 15 23:39:59 2021
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   E:\Documents\SQLDATA\movies_metadata.ctl
+Data File:      E:\Documents\SQLDATA\movies_metadata.csv
+  Bad File:     E:\Documents\SQLDATA\movies_metadata.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Continuation:    none specified
+Path used:      Direct
+
+Table MEDIA, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+X1                                  FIRST     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X2                                   NEXT   500   ,  O(") CHARACTER            
+  (FILLER FIELD)
+MEDIAID                              NEXT     *   ,  O(") CHARACTER            
+LANGUAGEID                           NEXT     *   ,  O(") CHARACTER            
+SYNOPSIS                             NEXT  1000   ,  O(") CHARACTER            
+COMPANYID                            NEXT     *   ,  O(") CHARACTER            
+X4                                   NEXT  1500   ,  O(") CHARACTER            
+  (FILLER FIELD)
+YEAR                                 NEXT     *   ,  O(") CHARACTER            
+X5                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+FRANCHISEID                          NEXT     *   ,  O(") CHARACTER            
+MEDIANAME                            NEXT   255   ,  O(") CHARACTER            
+
+Table MOVIE, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+X1                                      1     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X2                                   NEXT   500   ,  O(") CHARACTER            
+  (FILLER FIELD)
+MOVIEID                              NEXT     *   ,  O(") CHARACTER            
+X3                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X4                                   NEXT  1000   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X5                                   NEXT  1500   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X6                                   NEXT  1500   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X7                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+MOVIELENGTH                          NEXT     *   ,  O(") CHARACTER            
+X8                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X9                                   NEXT   255   ,  O(") CHARACTER            
+  (FILLER FIELD)
+
+
+Referential Integrity Constraint/Trigger Information:
+NULL, UNIQUE, and PRIMARY KEY constraints are unaffected.
+
+Constraint MEDIA.FK_MEDIA_FRANCHISE was disabled and novalidated before the load.
+Constraint MEDIA.FK_MEDIA_COMPANY was disabled and novalidated before the load.
+Constraint MOVIE.FK_MOVIE_MEDIA was disabled and novalidated before the load.
+The following index(es) on table MEDIA were processed:
+index MEDIA.SYS_C00289121 loaded successfully with 32087 keys
+The following index(es) on table MOVIE were processed:
+index MEDIA.SYS_C00289142 loaded successfully with 32087 keys
+MEDIA.FK_MEDIA_FRANCHISE was re-enabled.
+MEDIA.FK_MEDIA_COMPANY was re-enabled.
+MOVIE.FK_MOVIE_MEDIA was re-enabled.
+
+Table MEDIA has no constraint exception table.
+MEDIA.FK_MEDIA_FRANCHISE was not re-validated due to ORACLE error.
+ORA-02298: cannot validate (MEDIA.FK_MEDIA_FRANCHISE) - parent keys not found
+
+Constraint MEDIA.FK_MEDIA_COMPANY was validated
+
+Table MOVIE has no constraint exception table.
+Constraint MOVIE.FK_MOVIE_MEDIA was validated
+
+Table MEDIA:
+  32087 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table MOVIE:
+  32087 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+Bind array size not used in direct path.
+Column array  rows :    5000
+Stream buffer bytes:  256000
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:         32087
+Total logical records rejected:         0
+Total logical records discarded:        0
+Total stream buffers loaded by SQL*Loader main thread:       32
+Total stream buffers loaded by SQL*Loader load thread:       31
+
+Run began on Mon Mar 15 23:39:59 2021
+Run ended on Mon Mar 15 23:40:10 2021
+
+Elapsed time was:     00:00:11.44
+CPU time was:         00:00:00.35

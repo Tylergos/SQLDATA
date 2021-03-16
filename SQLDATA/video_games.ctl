@@ -1,0 +1,57 @@
+LOAD data INTO TABLE Media
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+TRAILING NULLCOLS
+(
+MediaName char,
+x1 FILLER,
+CompanyID char,
+x3 FILLER,
+Year char,
+MediaID char,
+x4 FILLER,
+FranchiseID char,
+LanguageID char,
+x5 FILLER,
+Synopsis char(1000)
+)
+INTO TABLE Game
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+TRAILING NULLCOLS
+(
+x1 FILLER POSITION(1),
+GameType char,
+x2 FILLER,
+x3 FILLER,
+x4 FILLER char,
+GameID char,
+x5 FILLER,
+x6 FILLER char,
+x7 FILLER char,
+Difficulty char,
+x8 FILLER char(1000)
+)
+INTO TABLE OnPlatform
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+TRAILING NULLCOLS
+(
+x1 FILLER POSITION(1),
+x8 FILLER,
+x2 FILLER,
+PlatformID char,
+x4 FILLER char,
+GameID char,
+x5 FILLER,
+x6 FILLER char,
+x7 FILLER char,
+x9 FILLER char,
+x10 FILLER char(1000)
+)

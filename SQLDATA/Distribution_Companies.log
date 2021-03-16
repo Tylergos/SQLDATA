@@ -1,0 +1,53 @@
+
+SQL*Loader: Release 12.2.0.1.0 - Production on Mon Mar 15 23:39:33 2021
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   E:\Documents\SQLDATA\Distribution_Companies.ctl
+Data File:      E:\Documents\SQLDATA\Distribution_Companies.csv
+  Bad File:     E:\Documents\SQLDATA\Distribution_Companies.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Continuation:    none specified
+Path used:      Direct
+
+Table DISTRIBUTIONCOMPANY, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COMPANYNAME                         FIRST     *   ,  O(") CHARACTER            
+COMPANYID                            NEXT     *   ,  O(") CHARACTER            
+LOCATION                             NEXT     *   ,  O(") CHARACTER            
+
+The following index(es) on table DISTRIBUTIONCOMPANY were processed:
+index MEDIA.SYS_C00289114 loaded successfully with 11886 keys
+
+Table DISTRIBUTIONCOMPANY:
+  11886 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+Bind array size not used in direct path.
+Column array  rows :    5000
+Stream buffer bytes:  256000
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:         11886
+Total logical records rejected:         0
+Total logical records discarded:        0
+Total stream buffers loaded by SQL*Loader main thread:        3
+Total stream buffers loaded by SQL*Loader load thread:        0
+
+Run began on Mon Mar 15 23:39:33 2021
+Run ended on Mon Mar 15 23:39:34 2021
+
+Elapsed time was:     00:00:00.75
+CPU time was:         00:00:00.25

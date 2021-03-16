@@ -1,0 +1,33 @@
+LOAD data INTO TABLE Media
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+(
+MediaID char,
+MediaName char(255),
+x1 FILLER char(1000),
+LanguageID char,
+x2 FILLER,
+Year char,
+CompanyID char,
+FranchiseID char,
+x4 FILLER
+)
+INTO TABLE BOOK
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+TRAILING NULLCOLS
+(
+BookID POSITION(1) char,
+x1 FILLER char(255),
+x2 FILLER char(1000),
+x3 FILLER char,
+PageCount char,
+x4 FILLER char,
+x5 FILLER,
+x6 FILLER char,
+ChapterCount char
+)

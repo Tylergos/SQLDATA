@@ -1,0 +1,37 @@
+LOAD data INTO TABLE Media
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+(
+x1 FILLER,
+x2 FILLER char(500),
+MediaID char,
+LanguageID char,
+Synopsis char(1000),
+CompanyID char,
+x4 FILLER char(1500),
+Year char,
+x5 FILLER,
+FranchiseID char,
+MediaName char(255)
+)
+INTO TABLE Movie
+APPEND
+EVALUATE CHECK_CONSTRAINTS
+REENABLE DISABLED_CONSTRAINTS
+FIELDS TERMINATED BY ',' optionally enclosed by '"'
+TRAILING NULLCOLS
+(
+x1 FILLER POSITION(1),
+x2 FILLER char(500),
+MovieID char,
+x3 FILLER,
+x4 FILLER char(1000),
+x5 FILLER char(1500),
+x6 FILLER char(1500),
+x7 FILLER char,
+MovieLength char,
+x8 FILLER,
+x9 FILLER char(255)
+)

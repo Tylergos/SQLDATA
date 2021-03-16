@@ -1,0 +1,166 @@
+
+SQL*Loader: Release 12.2.0.1.0 - Production on Mon Mar 15 23:39:40 2021
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   E:\Documents\SQLDATA\video_games.ctl
+Data File:      E:\Documents\SQLDATA\video_games.csv
+  Bad File:     E:\Documents\SQLDATA\video_games.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Continuation:    none specified
+Path used:      Direct
+
+Table MEDIA, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+MEDIANAME                           FIRST     *   ,  O(") CHARACTER            
+X1                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+COMPANYID                            NEXT     *   ,  O(") CHARACTER            
+X3                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+YEAR                                 NEXT     *   ,  O(") CHARACTER            
+MEDIAID                              NEXT     *   ,  O(") CHARACTER            
+X4                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+FRANCHISEID                          NEXT     *   ,  O(") CHARACTER            
+LANGUAGEID                           NEXT     *   ,  O(") CHARACTER            
+X5                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+SYNOPSIS                             NEXT  1000   ,  O(") CHARACTER            
+
+Table GAME, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+X1                                      1     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+GAMETYPE                             NEXT     *   ,  O(") CHARACTER            
+X2                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X3                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X4                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+GAMEID                               NEXT     *   ,  O(") CHARACTER            
+X5                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X6                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X7                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+DIFFICULTY                           NEXT     *   ,  O(") CHARACTER            
+X8                                   NEXT  1000   ,  O(") CHARACTER            
+  (FILLER FIELD)
+
+Table ONPLATFORM, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+X1                                      1     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X8                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X2                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+PLATFORMID                           NEXT     *   ,  O(") CHARACTER            
+X4                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+GAMEID                               NEXT     *   ,  O(") CHARACTER            
+X5                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X6                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X7                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X9                                   NEXT     *   ,  O(") CHARACTER            
+  (FILLER FIELD)
+X10                                  NEXT  1000   ,  O(") CHARACTER            
+  (FILLER FIELD)
+
+
+Referential Integrity Constraint/Trigger Information:
+NULL, UNIQUE, and PRIMARY KEY constraints are unaffected.
+
+Constraint MEDIA.FK_MEDIA_FRANCHISE was disabled and novalidated before the load.
+Constraint MEDIA.FK_MEDIA_COMPANY was disabled and novalidated before the load.
+Constraint GAME.FK_GAME_MEDIA was disabled and novalidated before the load.
+Constraint ONPLATFORM.FK_ONPLATFORM_GAME was disabled and novalidated before the load.
+Constraint ONPLATFORM.FK_ONPLATFORM_PLATFORM was disabled and novalidated before the load.
+The following index(es) on table MEDIA were processed:
+index MEDIA.SYS_C00289121 loaded successfully with 700 keys
+The following index(es) on table GAME were processed:
+index MEDIA.SYS_C00289145 loaded successfully with 700 keys
+The following index(es) on table ONPLATFORM were processed:
+index MEDIA.SYS_C00289147 loaded successfully with 700 keys
+MEDIA.FK_MEDIA_FRANCHISE was re-enabled.
+MEDIA.FK_MEDIA_COMPANY was re-enabled.
+GAME.FK_GAME_MEDIA was re-enabled.
+ONPLATFORM.FK_ONPLATFORM_GAME was re-enabled.
+ONPLATFORM.FK_ONPLATFORM_PLATFORM was re-enabled.
+
+Table MEDIA has no constraint exception table.
+MEDIA.FK_MEDIA_FRANCHISE was not re-validated due to ORACLE error.
+ORA-02298: cannot validate (MEDIA.FK_MEDIA_FRANCHISE) - parent keys not found
+
+Constraint MEDIA.FK_MEDIA_COMPANY was validated
+
+Table GAME has no constraint exception table.
+Constraint GAME.FK_GAME_MEDIA was validated
+
+Table ONPLATFORM has no constraint exception table.
+Constraint ONPLATFORM.FK_ONPLATFORM_GAME was validated
+ONPLATFORM.FK_ONPLATFORM_PLATFORM was not re-validated due to ORACLE error.
+ORA-02298: cannot validate (MEDIA.FK_ONPLATFORM_PLATFORM) - parent keys not found
+
+
+Table MEDIA:
+  700 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table GAME:
+  700 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table ONPLATFORM:
+  700 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+Bind array size not used in direct path.
+Column array  rows :    5000
+Stream buffer bytes:  256000
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:           700
+Total logical records rejected:         0
+Total logical records discarded:        0
+Total stream buffers loaded by SQL*Loader main thread:        3
+Total stream buffers loaded by SQL*Loader load thread:        0
+
+Run began on Mon Mar 15 23:39:40 2021
+Run ended on Mon Mar 15 23:39:41 2021
+
+Elapsed time was:     00:00:01.09
+CPU time was:         00:00:00.25
